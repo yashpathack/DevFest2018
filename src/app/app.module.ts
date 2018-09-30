@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+// Routes and Routing
 import { Routes, RouterModule } from '@angular/router';
+
+// Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AttendingComponent } from './attending/attending.component';
@@ -11,6 +15,19 @@ import { TeamComponent } from './team/team.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
+// Firebase and Forms
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+var config = {
+  apiKey: "AIzaSyCaxS5PXtECI5mUdgRsdGzsvPDjX_SOC_g",
+  authDomain: "fun-45.firebaseapp.com",
+  databaseURL: "https://fun-45.firebaseio.com",
+  projectId: "fun-45",
+  storageBucket: "fun-45.appspot.com",
+  messagingSenderId: "740914088501"
+};
 
 const routes: Routes = [
   { path: '', component: HomeComponent ,pathMatch:'full'},
@@ -38,6 +55,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
