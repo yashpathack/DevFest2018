@@ -1,4 +1,7 @@
-# GdgApp
+![](https://api.travis-ci.org/GDG-Jalandhar/DevFest2018.svg)
+
+# GDG Jalandhar DevFest Website 2018
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
