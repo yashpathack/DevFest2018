@@ -1,5 +1,7 @@
 ![](https://api.travis-ci.org/GDG-Jalandhar/DevFest2018.svg)
 
+[![Coverage Status](https://coveralls.io/repos/github/GDG-Jalandhar/DevFest2018/badge.svg?branch=master)](https://coveralls.io/github/GDG-Jalandhar/DevFest2018?branch=master)
+
 # GDG Jalandhar DevFest Website 2018
 
 
