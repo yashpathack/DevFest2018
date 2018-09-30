@@ -1,20 +1,189 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<!-- Desktop Naviagiton -->
+<nav class="navbar navbar-expand-lg navbar-light white fixed-top" style="z-index: 5;">
+  <div class="container-fluid col-md-10 offset-md-1 offset-lg-1 offset-xl-1 pr-0 col-md-10 col-12">
+
+      <a class="navbar-brand google-font" style="color: #616161" href="/"><b>GDG DevFest'18</b></a>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">      
+          <ul class="navbar-nav mr-auto mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/attending">Attending</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/sessions">Sessions</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/speakers">Speakers</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/team">Teams</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+              <li class="nav-item">
+                  <a class="nav-link google-font primary-color" style="color: white" routerLink="/registration"><i class="fa fa-bell-o" aria-hidden="true"></i>  Request for an Invitation &nbsp;</a>
+              </li>
+          </ul> 
+  
+      </div>
+  </div>
+</nav>
+<!-- Desktop Naviagiton ENDS-->
+
+<!-- Mobile Footer Navigation -->
+<nav class="navbar navbar-light white pt-1 pb-1 z-depth-3 fixed-bottom d-block d-md-block d-sm-block d-lg-none text-center">
+  <div class="container-fluid">
+      <div class="row text-center p-0" style="width: 120%;">
+          <div class="col-md-3 col-sm-3 col-3 text-center p-0">
+               <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" routerLink="/">
+                   <i class="fa fa-home mb-0" aria-hidden="true"></i>
+                   <p style="font-size: 40%" class="mb-0 mt-0">Home</p>
+               </a>
+          </div>
+          <div class="col-md-3 col-sm-3 col-3 p-0 text-center p-0">
+               <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" routerLink="/registration">
+                   <i class="fa fa-bell-o" aria-hidden="true"></i>
+                   <p style="font-size: 40%" class="mb-0 mt-0">Registration</p>
+               </a>
+          </div>
+          <div class="col-md-3 col-sm-3 col-3 p-0 text-center">
+               <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" routerLink="/speakers">
+                   <i class="fa fa-users mb-0" aria-hidden="true"></i>
+                   <p style="font-size: 40%" class="mb-0 mt-0">Speakers</p>
+               </a>
+          </div>
+          <div class="col-md-3 col-sm-3 col-3 p-0 text-center">
+               <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" routerLink="/sessions">
+                   <i class="fa fa-paper-plane-o mb-0" aria-hidden="true"></i>
+                   <p style="font-size: 40%" class="mb-0 mt-0">Sessions</p>
+               </a>
+          </div>
+      </div>
+  </div>
+</nav>
+<!-- Mobile Footer Navigation ENDS-->
+
+<br><br>
+<!-- Dynamic Views -->
+<router-outlet></router-outlet>
+<!-- Dynamic Views ENDS -->
+
+<!-- Footer For Desktop-->
+<div class="container-fluid mb-4 d-none d-sm-none d-md-none d-lg-block footer-animation ng-scope" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-bottom: 0" ng-controller="footerCtrl">
+  <div class="row ">
+      <div class="col-md-10 offset-md-1 ">
+          <p style="font-family: google-sans;">
+              <br>
+              <b>Follow Us</b> 
+              &nbsp;&nbsp;
+              <a href="https://plus.google.com/u/0/+GdgjalandharIn/posts" target="_blank">
+              <i class="fa fa-google-plus fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
+              </a>
+              &nbsp;
+              <a href="https://www.facebook.com/GDGJalandhar/" target="_blank">
+              <i class="fa fa-facebook fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
+              </a>
+              &nbsp;
+              <a href="https://www.meetup.com/GDG-Jalandhar/" target="_blank">
+              <i class="fa fa-meetup fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
+              </a>
+              &nbsp;
+              <a href="" target="_blank">
+              <i class="fa fa-linkedin fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
+              </a>
+              &nbsp;
+              <a href="https://twitter.com/gdgjalandhar" target="_blank">
+              <i class="fa fa-twitter fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
+              </a>
+              &nbsp;
+              <a href="" target="_blank">
+              <i class="fa fa-youtube-play fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
+              </a>
+              &nbsp;
+              <a href="{{footerData.chapterSocialMediaLinks.slack" target="_blank">
+              <i class="fa fa-slack fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
+              </a>
+              &nbsp;
+              <a href="" target="_blank">
+              <i class="fa fa-github fa-x" aria-hidden="true" style="color:white;"></i>
+              </a>
+          </p>
+          <hr>
+         
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-2 mt-3 offset-md-1">
+          <p style="font-family: google-sans;font-size: 115%;font-weight: 300;"><b>About</b></p>         
+          <!-- ngRepeat: fdas in footerData.aboutSection --><div ng-repeat="fdas in footerData.aboutSection" class="ng-scope">
+              <a href="http://gdgjalandhar.com/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">GDG Jalandhar</a>
+              <br>
+          </div><!-- end ngRepeat: fdas in footerData.aboutSection --><div ng-repeat="fdas in footerData.aboutSection" class="ng-scope">
+              <a href="https://developers.google.com/programs/community/gdg/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Google Developers Groups</a>
+              <br>
+          </div><!-- end ngRepeat: fdas in footerData.aboutSection --><div ng-repeat="fdas in footerData.aboutSection" class="ng-scope">
+              <a href="https://www.womentechmakers.com/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">WomenTechamkers</a>
+              <br>
+          </div><!-- end ngRepeat: fdas in footerData.aboutSection --><div ng-repeat="fdas in footerData.aboutSection" class="ng-scope">
+              <a href="https://gdgjalandhar.com/#/team" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Meet the Team</a>
+              <br>
+          </div><!-- end ngRepeat: fdas in footerData.aboutSection --><div ng-repeat="fdas in footerData.aboutSection" class="ng-scope">
+              <a href="https://www.meetup.com/GDG-Jalandhar/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Become a Member</a>
+              <br>
+          </div><!-- end ngRepeat: fdas in footerData.aboutSection -->      
+      </div>
+      <div class="col-md-2 mt-3">
+          <p style="font-family: google-sans;font-size: 115%;font-weight: 300;"><b>Event Resources</b></p>
+          <!-- ngRepeat: fdas1 in footerData.eventResourcesSection --><div ng-repeat="fdas1 in footerData.eventResourcesSection" class="ng-scope">
+              <a href="gdgjalandhar@gmail.com" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Become a Sponsor</a>
+              <br>
+          </div><!-- end ngRepeat: fdas1 in footerData.eventResourcesSection --><div ng-repeat="fdas1 in footerData.eventResourcesSection" class="ng-scope">
+              <a href="gdgjalandhar@gmail.com" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Call for Speaker</a>
+              <br>
+          </div><!-- end ngRepeat: fdas1 in footerData.eventResourcesSection --><div ng-repeat="fdas1 in footerData.eventResourcesSection" class="ng-scope">
+              <a href="https://drive.google.com/drive/folders/16rHDaHbuS_YApMWgJHUxygpd-A5gCkLK" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Media Kit</a>
+              <br>
+          </div><!-- end ngRepeat: fdas1 in footerData.eventResourcesSection -->  
+      </div>
+
+      <div class="col-md-2 mt-3">
+          <p style="font-family: google-sans;font-size: 115%;font-weight: 300;"><b>Developer Consoles</b></p>
+          <!-- ngRepeat: fdas2 in footerData.DevConsole --><div ng-repeat="fdas2 in footerData.DevConsole" class="ng-scope">
+              <a href="https://console.developers.google.com/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Google API Console</a>
+              <br>
+          </div><!-- end ngRepeat: fdas2 in footerData.DevConsole --><div ng-repeat="fdas2 in footerData.DevConsole" class="ng-scope">
+              <a href="https://console.cloud.google.com/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">GCP Console</a>
+              <br>
+          </div><!-- end ngRepeat: fdas2 in footerData.DevConsole --><div ng-repeat="fdas2 in footerData.DevConsole" class="ng-scope">
+              <a href="https://console.cloud.google.com/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Google Play Console</a>
+              <br>
+          </div><!-- end ngRepeat: fdas2 in footerData.DevConsole --><div ng-repeat="fdas2 in footerData.DevConsole" class="ng-scope">
+              <a href="https://console.firebase.google.com/" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Firebase Console</a>
+              <br>
+          </div><!-- end ngRepeat: fdas2 in footerData.DevConsole --> 
+      </div>
+
+  </div>
+  <div class="row">
+      <div class="col-md-10 offset-md-1">
+          <hr>
+          <br>
+          <ul class="list-inline">
+              <li class="list-inline-item mr-5">
+                  <h3 style="font-family: google-sans;" class="ng-binding">GDG Jalandhar</h3>
+              </li>
+
+              <!-- ngRepeat: fdas3 in footerData.footerEndSection --><li class="list-inline-item ng-scope" ng-repeat="fdas3 in footerData.footerEndSection">
+                  <a href="https://docs.google.com/document/d/1Wz_w6Z7usMnXKFMpOY4IPbA35twK7Uc4CAxScGDiwOk/edit" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Code of Conduct</a>
+              </li><!-- end ngRepeat: fdas3 in footerData.footerEndSection --><li class="list-inline-item ng-scope" ng-repeat="fdas3 in footerData.footerEndSection">
+                  <a href="https://docs.google.com/document/d/14g3fv9NItiB8Hd-YGYyVYd2N4LRxe6Bx3syWse_wsiA/edit?usp=sharing" style="color: #3E4551;font-family: google-sans;" class="ng-binding">Terms &amp; Servies</a>
+              </li><!-- end ngRepeat: fdas3 in footerData.footerEndSection -->
+          </ul>
+      </div>
+  </div>
+</div>
+<!-- Footer For Desktop ENDS -->

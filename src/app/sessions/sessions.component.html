@@ -1,0 +1,388 @@
+<div class="container-fluid primary-color z-depth-1 pt-2 mt-2 ng-scope">
+  <div class="row p-2 p-0">
+    <div class="col-md-10 offset-md-1 pl-1">
+      <ul class="nav md-tabs mx-0 mb-0 mt-1 mb-1 p-0">
+        <li class="nav-item {{tab?'active-bar':'inactive-bar'}}" id="showSessionID">
+          <a class="nav-link google-font" (click)="showSchedule()"><b>Sessions</b></a>
+        </li>
+        <li class="nav-item {{!tab?'active-bar':'inactive-bar'}}" id="showScheduleID">
+          <a class="nav-link google-font" (click)="showSchedule()"><b>Schedule</b></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Session -->
+
+<div class="container-fluid pt-2 mt-2" *ngIf="tab">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="container-fluid">
+
+        <div class="row pt-5">
+          <div class="col-md-8">
+            <h3 style="font-family: google-sans;color: #1a73e8;" class="animated fadeInUp">Sessions</h3>
+            <br>
+            <p style="font-family: google-sans" class="animated fadeInUp">Hone your skills. Ask technical questions.
+              Get inspired. This year’s program is packed with breakouts, keynotes, spotlights, panels, and bootcamps.</p>
+
+            <p style="font-family: google-sans" class="animated fadeInUp">Check back often as we continue to add new
+              sessions.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row animated fadeInUp">
+
+              <!-- ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Introduction to TensorFlow.js</h5>
+                  <p class="ng-binding">Introducing TensorFlow.js, an open-source library you can use to define, train,
+                    and run machine learning models entirely in the browser, using Javascript and a high-level layers
+                    API. If you’re a Javascript developer who’s new to ML, TensorFlow.js is a great way to begin
+                    learning. Or, if you’re a ML developer who’s new to Javascript, read on to learn more about new
+                    opportunities for in-browser ML. In this post, we’ll give you a quick overview of TensorFlow.js,
+                    and getting started resources you can use to try it out.</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Flutter</h5>
+                  <p class="ng-binding">Flutter is Google’s mobile app SDK for crafting high-quality native interfaces
+                    on iOS and Android in record time. Flutter is an easy and fast way to build beautiful mobile apps.
+                    If you are an experienced iOS or Android developer, you can use Flutter for your views and leverage
+                    much of your existing Java/Kotlin/ObjC/Swift investment. We'll go through app development in this
+                    part of session</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Modern Android Development: Android Jetpack
+                    and Kotlin</h5>
+                  <p class="ng-binding">Jetpack is a collection of Android software components to make it easier for
+                    you to develop great Android apps. These components help you follow best practices, free you from
+                    writing boilerplate code, and simplify complex tasks, so you can focus on the code you care about.
+                    Also, Kotlin will be talked about. You can write Android apps in Kotlin. Kotlin is expressive,
+                    concise, and powerful. Best of all, it's interoperable with the Java programming language and the
+                    existing Android runtime. We'll give a brief overview of the two.</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">AMP and PWA</h5>
+                  <p class="ng-binding">The AMP Project is an open-source initiative aiming to make the web better for
+                    all. The project enables the creation of websites and ads that are consistently fast, beautiful and
+                    high-performing across devices and distribution platforms. Also we'll discuss PWA.Progressive Web
+                    Apps are web applications that load like regular web pages or websites but can offer the user
+                    functionality such as working offline, push notifications, and device hardware access traditionally
+                    available only to native mobile applications. </p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Google Developers Certifications</h5>
+                  <p class="ng-binding">Google Developers Certification lets you demonstrate your proficiency and
+                    skill. After you pass a certification exam, you can use your certification to promote yourself to
+                    the communities, projects, and employers that are important to you. When you pass a certification
+                    exam, Google stores your certificate, badge, or other digital mark in a central, verifiable
+                    location. You can include your digital mark in your email signature and embed it on sites such as
+                    LinkedIn and Twitter.</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Material Design</h5>
+                  <p class="ng-binding">Material is an adaptable system of guidelines, components, and tools that
+                    support the best practices of user interface design. Backed by open-source code, Material
+                    streamlines collaboration between designers and developers, and helps teams quickly build beautiful
+                    products. We'll talk how Google takes in use of it, and what can we do with it. </p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Inclusive Design</h5>
+                  <p class="ng-binding">Inclusive Design is the design of an environment so that it can be accessed and
+                    used by as many people as possible, regardless of age, gender and disability. An environment that
+                    is designed inclusively is not just relevant to buildings; it also applies to surrounding open
+                    spaces, websites, applications and everyday activities. This includes shops, offices, applications,
+                    businesses, websites and streets. Inclusive design keeps the diversity and uniqueness of each
+                    individual in mind. So we'll have some deep thoughts with this one!</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Future of Immersive Web</h5>
+                  <p class="ng-binding">The immersive web means virtual world experiences hosted through the browser.
+                    This covers entire virtual reality (VR) experiences surfaced in the browser or in VR enabled
+                    headsets like Google's Daydream, Oculus Rift, Samsung Gear VR, HTC Vive, and Windows Mixed Reality
+                    Headsets, as well as augmented reality experiences developed for AR-enabled mobile devices. We'll
+                    try to picture the future where every digital product can be visualised into an immersive arena.</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Unified Cloud</h5>
+                  <p class="ng-binding">A unified cloud platform is a refinement of a converged infrastructure with
+                    cloud software/functionality layer on it. Converged infrastructure operates by grouping multiple
+                    information technology (IT) components into a single, optimized computing package. Components of a
+                    converged infrastructure may include servers,data-storage devices, networking equipment and
+                    software for IT infrastructure management, automation and orchestration. So how can we work with
+                    it, we'll learn in thsi segment.</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">GDG - WTM Panel</h5>
+                  <p class="ng-binding">Women Techmakers programs provide visibility, community, and resources for
+                    women in technology globally. We encourage you to participate, and spread the word. Learn about new
+                    and interesting Google platforms, tools, and services, while gathering with other women in
+                    technology at a meetup near you. Our Women Techmakers Leads collaborate within Google Developer
+                    Groups to ensure we are creating a diverse and inclusive ecosystem around the globe. Our WTM team
+                    will guide the you with the opportunities and products you can work with.</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">AI in GSuite</h5>
+                  <p class="ng-binding">Google has added nearly 300 new capabilities to G Suite in just the past year
+                    and continues to add more, including several AI-powered features. With more than 4 million
+                    businesses relying on G suite, the collaboration portfolio has to be secure. At Next, Google
+                    unveiled the G Suite Investigation Tool, a single console that lets administrators gather and
+                    identify security threats such as malicious email in real time. We'll discuss that in the sessions.
+                  </p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Firebase and MLKit</h5>
+                  <p class="ng-binding">ML Kit lets you bring powerful machine learning features to your app whether
+                    it's for Android or iOS, and whether you're an experienced machine learning developer or you're
+                    just getting started. Firebase helps you develop high-quality apps, grow your user base, and earn
+                    more money. Each feature works independently, and they work even better together.They both go hand
+                    in hand to ease the work you want to be done.</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Kubernetes</h5>
+                  <p class="ng-binding">Kubernetes is an open-source system for automating deployment, scaling, and
+                    management of containerized applications.It groups containers that make up an application into
+                    logical units for easy management and discovery. Kubernetes builds upon 15 years of experience of
+                    running production workloads at Google, combined with best-of-breed ideas and practices from the
+                    community. So this will be lit up with the goodness of Kubernetes. </p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">5 ways to make your application more
+                    successful with Firebase</h5>
+                  <p class="ng-binding">Building a high-quality app that receives rave reviews and accolades is great,
+                    but it turns out that your coffee shop down the street doesn't accept accolades as payment. You
+                    also need to build a successful business. Firebase is here to help you! In this session you'll
+                    learn how features like Firebase Predictions, Analytics, and A/B testing can help you grow your
+                    app's business strategy from cross your fingers and hope something works to a comprehensive
+                    data-driven strategy for success. This will be the talk of the hour</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+              <div class="col-md-6 col-sm-6 mt-4 ng-scope" ng-repeat="sedt in sessionsData">
+                <div class="white p-3 pt-4" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-radius: 8px;height:100%">
+                  <img src="https://devfest.gdgjalandhar.com/assets/img/gdg logo.svg" alt="GDG Logo" width="30vh" style="background:#fafafa;border-radius: 2px;"
+                    class="mb-3">
+                  <h5 style="font-family: google-sans;" class="ng-binding">Grow your app business through user
+                    acquisition and monetization</h5>
+                  <p class="ng-binding">Building a successful apps business requires smart growth strategies focused on
+                    acquiring and monetizing the right users. Google’s app ads solutions empower you to reach these
+                    users efficiently and to deliver user-first ads experiences. This session will cover the latest
+                    AdWords and AdMob innovations that help app developers thrive</p>
+                </div>
+              </div><!-- end ngRepeat: sedt in sessionsData -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Session End -->
+
+
+<!-- Tab Schedule -->
+
+<div class="container-fluid pt-2 mt-2" *ngIf="!tab">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="container-fluid ng-scope" ng-controller="ctrlSchedule">
+
+        <div class="row pt-5">
+          <div class="col-md-8">
+            <h3 style="font-family: google-sans;color: #1a73e8;" class="animated fadeInUp">Schedule</h3>
+            <br>
+            <p style="font-family: google-sans" class="animated fadeInUp">Hone your skills. Ask technical questions.
+              Get inspired. This year’s program is packed with breakouts, keynotes, spotlights, panels, and bootcamps.</p>
+
+            <p style="font-family: google-sans" class="animated fadeInUp">Check back often as we continue to add new
+              sessions.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="md-form animated fadeInUp">
+              <input type="text" id="materialLoginFormEmail" class="form-control ng-pristine ng-valid" ng-model="search">
+              <label for="materialLoginFormEmail"><i class="fa fa-search" aria-hidden="true"></i> Search inside
+                Schedule</label>
+              <small>All times are Indian Standard Time (UTC+05:30)</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <table class="table table-hover animated fadeInUp" style="width: 100%;border-color:#e0e0e0;">
+              <tbody>
+                <tr class="primary-color text-white">
+                  <td class="p-3" style="width: 20%">
+                    <p class="google-font mb-0">Timing</p>
+                  </td>
+                  <td class="p-3" style="width: 20%">
+                    <p class="google-font mb-0">Sessions Name</p>
+                  </td>
+                </tr>
+                <!-- ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">09.00 AM - 09.45 AM</p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Registration</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">10.00 AM - 10.15 AM</p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Welcome Keynote</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">10.15 AM - 11.00 AM</p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Session 1</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">11.00 AM - 12.00 PM</p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Session 2</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">12.00 PM - 01.00 PM</p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Session 3</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">01.00 PM - 02.00 PM</p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Session 4</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">03.00 PM - 04.00 PM</p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Session 5</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+                <tr ng-repeat="sd in schData | filter: search" class="ng-scope">
+                  <td class="p-3" style="width: 20%;">
+                    <p class="google-font ng-binding">04.00 PM - 05.00 PM </p>
+                  </td>
+                  <td class="p-3" style="width: 80%;">
+                    <p class="google-font ng-binding">Session 6</p>
+                  </td>
+                </tr><!-- end ngRepeat: sd in schData | filter: search -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Tab Schedule Ends -->
+
+
+
+
+<div class="container-fluid ng-scope" style="background-image: url('https://devfest.gdgjalandhar.com/assets/img/a.svg');background-repeat: no-repeat;background-size: cover;">
+
+  <div class="row mt-3 pb-5">
+    <div class="col-md-6 offset-md-3 text-center mt-5">
+      <h3 style="font-family: google-sans;color: #1a73e8;" class="mb-3 ng-binding">Our Patners</h3>
+      <p class="ng-binding">Interested in becoming a sponsor? Contact us at gdgjalandhar@gmail.com for opportunities to
+        be showcased throughout the event.</p>
+      <br>
+      <!-- ngRepeat: pd in patData.patnersName -->
+      <div ng-repeat="pd in patData.patnersName" class="ng-scope">
+        <a href="https://developers.google.com/groups/" class="mb-5"><img src="https://devfest.gdgjalandhar.com/assets/img/patners/GDG-program-logo.png"
+            width="160h" title="Google Developers Groups"></a>
+      </div><!-- end ngRepeat: pd in patData.patnersName -->
+      <div ng-repeat="pd in patData.patnersName" class="ng-scope">
+        <a href="https://www.womentechmakers.com/" class="mb-5"><img src="https://devfest.gdgjalandhar.com/assets/img/patners/WT_logo_horizontal_pos.png"
+            width="280h" title="WomenTechmakers"></a>
+      </div><!-- end ngRepeat: pd in patData.patnersName -->
+      <div ng-repeat="pd in patData.patnersName" class="ng-scope">
+        <a href="https://www.facebook.com/MDCJalandhar/" class="mb-5"><img src="https://devfest.gdgjalandhar.com/assets/img/patners/mozilla.png"
+            width="140h" title="Mozilla Developers Community"></a>
+      </div><!-- end ngRepeat: pd in patData.patnersName -->
+      <br>
+      <br>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,9 @@
+.active-bar{
+  color: white;
+  border: 5px;
+  border-bottom: 10px;
+  
+}
+.inactive-bar{
+  color:#bbdefb;
+}
